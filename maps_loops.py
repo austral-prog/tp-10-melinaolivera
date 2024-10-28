@@ -1,6 +1,6 @@
 def find_max_value(dict):
     valor = -1
-    nombre = none
+    nombre = ""
     for key,value in dict.items():
         if value > valor:
             valor = value
@@ -29,7 +29,7 @@ def word_freq_counter(words):
 
 def find_biggest_expense(dict):
     valor = 0
-    gasto = none
+    gasto = ""
     for key, value in dict.items():
         costo = sum(value) / len(value) # calculo el promedio
         if costo > valor:
@@ -49,11 +49,12 @@ print(sum_of_expenses(dictt))
 
 
 def sum_of_expenses_by_type(expenses):
-    diccionario = dict()
-    for key, value in expenses.items():
-        for type,cost in expenses:
-            if type in diccionario:
-                diccionario[type] += cost
-            else:
-                diccionario[type] = cost
-    return diccionario
+    def sum_of_expenses_by_type(expenses):
+        diccionario = {}
+        for key, value in expenses.items():
+            for type, cost in value:
+                if type in diccionario:
+                    diccionario[type] += cost
+                else:
+                    diccionario[type] = cost
+        return diccionario
