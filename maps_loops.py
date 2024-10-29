@@ -49,7 +49,6 @@ print(sum_of_expenses(dictt))
 
 
 def sum_of_expenses_by_type(expenses):
-    def sum_of_expenses_by_type(expenses):
         diccionario = {}
         for key, value in expenses.items():
             for type, cost in value:
