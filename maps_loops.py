@@ -7,15 +7,14 @@ def find_max_value(dict):
             nombre = key
     return nombre
 
-def reverse_dict(dict):
-    a = dict()
-    for key, value in dict.items():
-        if value in a:
-            a[value] += key # de esta manera lo doy vuelta y le sumo los valores iguales
+def reverse_dict(original_dict):
+    reversed_dict = {}  # Diccionario para almacenar el resultado
+    for key, value in original_dict.items():
+        if value in reversed_dict:
+            reversed_dict[value] += key  # Concatena claves si el valor ya existe
         else:
-            a[value] = key
-    return a
-
+            reversed_dict[value] = key  # Inicializa el valor con la clave
+    return reversed_dict  
 
 def word_freq_counter(words):
     diccionario = dict()
